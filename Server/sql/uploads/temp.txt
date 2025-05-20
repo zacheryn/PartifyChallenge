@@ -1,0 +1,1 @@
+Default images would be stored in 'sql/uploads' and default plus uploaded images would be stored in 'var/uploads'
