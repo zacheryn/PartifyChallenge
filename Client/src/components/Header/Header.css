@@ -1,0 +1,14 @@
+.header {
+  background-color: #a4c991;
+  font-size: 20pt;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.logo {
+    width: 200px;
+}
