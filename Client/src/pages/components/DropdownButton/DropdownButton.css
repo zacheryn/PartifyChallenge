@@ -20,3 +20,13 @@
 .button-open {
     border: rgb(147, 197, 253) 2px solid;
 }
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.enabled {
+    pointer-events: all;
+    opacity: 1;
+}

@@ -3,7 +3,7 @@ import DropdownButton from '../DropdownButton/DropdownButton'
 import DropdownContent from '../DropdownContent/DropdownContent'
 import { useState, useEffect, useRef } from 'react'
 
-const Dropdown = ({buttonText, content}) => {
+const Dropdown = ({buttonText, content, enabled}) => {
   const [open, setOpen] = useState(false);
   const [dropdownTop, setDropdownTop] = useState(0);
 
@@ -11,6 +11,7 @@ const Dropdown = ({buttonText, content}) => {
   const buttonRef = useRef();
   const contentRef = useRef();
 
+  // Handles opening and closing the dropdown
   const toggleDropdown = () => {
     if(!open){
       const spaceRemaining = window.innerHeight - buttonRef.current.getBoundingClientRect().bottom;
@@ -24,6 +25,7 @@ const Dropdown = ({buttonText, content}) => {
     setOpen((open) => !open);
   }
 
+  // Allows the dropdown to be closed by clicking outside of it
   useEffect(() => {
     const handler = (event) => {
       if(dropdownRef.current && !dropdownRef.current.contains(event.target)){
@@ -40,7 +42,7 @@ const Dropdown = ({buttonText, content}) => {
 
   return (
     <div className='dropdown' ref = {dropdownRef}>
-      <DropdownButton ref={buttonRef} toggle={toggleDropdown} open={open}>
+      <DropdownButton ref={buttonRef} toggle={toggleDropdown} open={open} enabled={enabled}>
         {buttonText}
       </DropdownButton>
       <DropdownContent top={dropdownTop} ref={contentRef} open={open} setOpen={setOpen}>

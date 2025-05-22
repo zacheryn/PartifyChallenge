@@ -1,0 +1,89 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  gap: 20px;
+  font-size: 20pt;
+  font-weight: normal;
+}
+
+.no-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.no-page-content {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  gap: 20px;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+.collections {
+  position: absolute;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.line {
+  margin-top: 10rem;
+}
+
+.collections-title {
+  font-size: 25pt;
+  font-weight: bold;
+  color: black;
+}
+
+.collections-details {
+  font-size: 18pt;
+  color: black;
+}
+
+.collections-content {
+  text-align: center;
+  height: auto;
+  /* Basically saying fit all children within the container */
+  overflow: hidden;
+  position: relative;
+  margin-top: 1rem;
+  font-size: 15pt;
+}
+
+.collections-content ul {
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  position: absolute; /* Add this */
+  left: 20%;  /* Add this */
+  right: 45%;  /* Add this */
+  margin: 0 auto;  /* Add this */
+  justify-items: center;
+}
+
+.collections-content ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.collections-content ul li a {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  padding: 0;
+}

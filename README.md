@@ -24,7 +24,7 @@ bin/db create
 bin/run
 ```
 
-Note: If you have already ran install and are returning, make sure you are in the python virtual environment before attempting to run.
+Note: If you have already ran install and are returning, make sure you are in the python virtual environment before attempting to run.  This can be done by running `source env/bin/activate` in the `Server/` directory.
 
 Once the backend REST API is running, the front end can be launched.  Navigate a terminal to `Client/` and run the following commands:
 
@@ -43,4 +43,4 @@ A flask app for a REST API that the frontend can communicate with to access the 
 
 ### Frontend
 
-A React app create with vite for the user to interact with directly.  This make several calls to the API as needed to show the user the desired parts with an intuitive UI.  It also utilizes CSS to design the site.
+A React app created with vite for the user to interact with directly.  This make several calls to the API as needed to show the user the desired parts with an intuitive UI.  It also utilizes CSS to design the site.  The home page has a search method to allow users to choose their vehicle within the database.  Once the vehicle is chosen and confirmed by pressing the serch button, they will be forwarded to the `/collections/` route where the year, make, and model of the chosen vehicle will be visible and links to the various Partify collection pages will be listed.  The first element in the list is always all parts for the vehicle, then it is followed by individual categories.
